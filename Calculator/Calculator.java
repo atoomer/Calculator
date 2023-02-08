@@ -6,9 +6,9 @@ public class Calculator {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter a whole number: ");
-        int firstNum = scan.nextInt();
+        double firstNum = scan.nextDouble();
         System.out.print("Enter a second number: ");
-        int secondNum = scan.nextInt();
+        double secondNum = scan.nextDouble();
 
         System.out.println("\nEnter the symbol for the operation you would like to perform: \n+ (add), - (minus), * (multiply), / (divide)\n");
         String operation = scan.next();
@@ -27,7 +27,15 @@ public class Calculator {
         }
         else if (operation.equals("/"))
         {
-            System.out.println(firstNum + " / " + secondNum + " = " + (firstNum/secondNum));
+            if (secondNum == 0)
+            {
+                System.out.println("\nError: Divide by Zero");
+                System.exit(0);
+            }
+            else
+            {
+                System.out.println(firstNum + " / " + secondNum + " = " + (firstNum/secondNum));
+            }
         }
         else
         {
