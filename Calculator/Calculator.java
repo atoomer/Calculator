@@ -10,7 +10,7 @@ public class Calculator {
         System.out.print("Enter a second number: ");
         double secondNum = scan.nextDouble();
 
-        System.out.println("\nWould you like to perform addition or subtraction?\n(type \"+\" for addition or \"-\" for subtraction)\n");
+        System.out.println("\nEnter the symbol for the operation you would like to perform: \n+ (add), - (minus), * (multiply), / (divide)\n");
         String operation = scan.next();
 
         if(operation.equals("+"))
@@ -20,6 +20,14 @@ public class Calculator {
         else if (operation.equals("-"))
         {
             System.out.println(firstNum + " - " + secondNum + " = " + (firstNum-secondNum));
+        }
+        else if (operation.equals("*"))
+        {
+            System.out.println(firstNum + " * " + secondNum + " = " + (firstNum*secondNum));
+        }
+        else if (operation.equals("/"))
+        {
+            System.out.println(firstNum + " / " + secondNum + " = " + (firstNum/secondNum));
         }
         else
         {
